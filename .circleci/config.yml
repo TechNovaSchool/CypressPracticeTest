@@ -1,26 +1,26 @@
-version: 2.1
-orbs:
-  cypress: cypress-io/cypress@3
-workflows:
-  build:
-    jobs:
-      - cypress/run:
-          start-command: 'npm run test'
-
 # version: 2.1
-
-# jobs:
-#   build:
-#     docker:
-#       - image: technova157/test1:latest 
-#     steps:
-#       - checkout
-#       - run:
-#           name: Execute Script
-#           command: npm run test
-
+# orbs:
+#   cypress: cypress-io/cypress@3
 # workflows:
-#   version: 2
-#   build_and_test:
+#   build:
 #     jobs:
+#       - cypress/run:
+#           start-command: 'npm run test'
+
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - image: technova157/test1:latest 
+    steps:
+      - checkout
+      - run:
+          name: Execute Script
+          command: npm run test
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
 #       - build
