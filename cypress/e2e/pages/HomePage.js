@@ -11,6 +11,7 @@ class HomePage{
         cy.get('.form-group>input[name="name"]')
         return this
     }
+    
 
     getEntrepeneur(){
         return cy.get('#inlineRadio3')
